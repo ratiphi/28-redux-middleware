@@ -27,8 +27,3 @@
 * complete all remaining lab 26 and 27 feature tasks
 * add a reporter middleware to your application's redux store
 * add validation to your redux reducers
-* create a series of tests that meet the test criteria below
-
-#### Tests
-* test all of your action creators
-* test each reducer used in your applications `combineReducers`
