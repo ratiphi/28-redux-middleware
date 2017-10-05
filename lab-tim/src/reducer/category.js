@@ -1,0 +1,20 @@
+let initialState = [];
+
+export default (state=initialState, action) => {
+  let {payload, type} = action;
+
+  switch(type) {
+  case 'CATEGORY_CREATE':
+    return [...state, payload];
+
+  case 'CATEGORY_UPDATE':
+    console.log('CATEGORY_UPDATE', payload);
+    return state.map((category) => category.id === payload.id ? payload : category);
+
+  case 'CATEGORY_DELETE':
+    return state.filter((category) => category.id !== payload.id);
+
+  default:
+    return state;
+  }
+};
