@@ -6,11 +6,11 @@ class ExpenseForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      categoryId: props.expense ? props.expense.categoryId : props.categoryId,
       id: props.expense ? props.expense.id : undefined,
       timestamp: props.expense ? props.expense.timestamp : undefined,
       name: props.expense ? props.expense.name : '',
-      price: props.expense ? props.expense.price : '',
-      categoryId: props.expense ? props.expense.categoryId : props.categoryId,
+      price: props.expense ? props.expense.price : 0,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -18,9 +18,9 @@ class ExpenseForm extends React.Component {
   }
 
   // if a new expense is being passed in update the state to reflect the change
-  componentWillReceiveProps(props) {
-    if(props.expense) this.setState(props.expense);
-  }
+  // componentWillReceiveProps(props) {
+  //   if(props.expense) this.setState(props.expense);
+  // }
 
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
@@ -28,10 +28,10 @@ class ExpenseForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.onComplete(Object.assign({}, this.state));
-    if (!this.props.expense) {
-      this.setState({name: ''});   //this line clears out the submit box on submit click
-    }
+    this.props.onComplete(this.state);
+    // if (!this.props.expense) {
+    //   this.setState({name: ''});   //this line clears out the submit box on submit click
+    // }
   }
 
   render() {

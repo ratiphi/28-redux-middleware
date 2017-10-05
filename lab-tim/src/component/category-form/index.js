@@ -8,8 +8,8 @@ class CategoryForm extends React.Component {
     this.state = {
       title: props.category ? props.category.title : '',
       id: props.category ? props.category.id : null,
-      budget: props.category ? props.category.budget : '',
-      timestamp: props.category ? props.category.timestamp : '',
+      budget: props.category ? props.category.budget : 0,
+      timestamp: props.category ? props.category.timestamp : null,
       //name: props.category ? props.category.name : '',
     };
 
@@ -29,9 +29,9 @@ class CategoryForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.onComplete(Object.assign({}, this.state));
-    if (!this.props.category) {
-      this.setState({title: ''});   //this line clears out the submit box on submit click
-    }
+    // if (!this.props.category) {
+    //   this.setState({title: ''});   //this line clears out the submit box on submit click
+    // }
   }
 
   render() {
@@ -41,7 +41,7 @@ class CategoryForm extends React.Component {
           required
           type="text"
           name="title"
-          placeholder="enter a category"
+          placeholder="enter a title"
           value={this.state.title}
           onChange={this.handleChange}/>
         <input

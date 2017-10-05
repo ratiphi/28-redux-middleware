@@ -15,13 +15,14 @@ class ExpenseItem  extends React.Component {
     console.log('__EXPENSE ITEM PROPS__', this.props);
 
     return (
-      <div className="expense-item">
-        <p>{this.props.expense.name}: {this.props.expense.price}</p>
+      <div className="expense-item" id={this.props.expense.id}>
         <button className='expense-delete' onClick={()=>this.props.expenseDelete(this.props.expense)}>X</button>
+        <p>{this.props.expense.name}: {this.props.expense.price}</p>
         <ExpenseForm
           categoryId={this.props.expense.categoryId}
           buttonText='update expense'
-          onComplete={this.props.expenseUpdate}/>
+          onComplete={this.props.expenseUpdate}
+          expense={this.props.expense}/>
       </div>
     );
   }

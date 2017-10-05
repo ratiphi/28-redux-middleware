@@ -9,9 +9,7 @@ import {categoryCreate as categoryActionCreate} from '../../action/category-acti
 class DashboardContainer extends React.Component {
   componentDidMount() {
     console.log('__DASHBOARD__', this);
-    this.props.categoryCreate({title: 'rent', budget: '2000'});
-    this.props.categoryCreate({title: 'food', budget: '500'});
-    this.props.categoryCreate({title: 'auto', budget: '500'});
+    this.props.categoryCreate({title: 'transportation', budget: '1000'});
   }
 
   render() {

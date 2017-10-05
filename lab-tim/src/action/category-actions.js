@@ -1,13 +1,13 @@
 import uuid from 'uuid/v4';
 
 export const categoryCreate = (category) => {
-  // category.id = uuid();
+  category.id = uuid();
+  category.timestamp = new Date();
   // category.name = '';
   // category.budget = 0;
-  // category.timestamp = new Date();
   return {
     type: 'CATEGORY_CREATE',
-    payload: {...category, id: uuid(), timestamp: new Date()},
+    payload: category,
   };
 };
 

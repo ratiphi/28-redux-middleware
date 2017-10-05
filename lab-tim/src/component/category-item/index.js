@@ -23,15 +23,18 @@ class CategoryItem  extends React.Component {
           category={this.props.category}
         />
         <button className='category-delete' onClick={()=>this.props.categoryDelete(this.props.category)}>X</button>
-        <ExpenseForm
-          buttonText='create expense'
-          categoryId={this.props.category.id}
-          onComplete={this.props.expenseCreate}
-        />
         <div className='expense-items'>
-          {this.props.expenses.map((expense) =>
-            <ExpenseItem key={expense.id} expense={expense} category={this.props} />
-          )}
+          <ExpenseForm
+            buttonText='create expense'
+            categoryId={this.props.category.id}
+            onComplete={this.props.expenseCreate}
+          />
+          {this.props.expenses[this.props.category.id].length ?
+            this.props.expenses[this.props.category.id].map((expense) =>
+              <ExpenseItem key={expense.id} expense={expense}/>)
+            :
+            <h3>currently no expenses</h3>
+          }
         </div>
       </div>
     );
@@ -40,7 +43,7 @@ class CategoryItem  extends React.Component {
 
 const mapStateToProps = (state, props) => {
   return {
-    expenses: state.expenses[props.category.id],
+    expenses: state.expenses,
   };
 };
 
