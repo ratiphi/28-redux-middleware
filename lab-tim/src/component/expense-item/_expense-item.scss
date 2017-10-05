@@ -1,20 +1,48 @@
-$color-primary-0: #4B2D73;
-$color-primary-1: #E4DAF0;
-$color-primary-2: #83729A;
-$color-primary-3: #24064D;
-$color-primary-4: #05000A;
+// $color-primary-0: #4B2D73;
+// $color-primary-1: #E4DAF0;
+// $color-primary-2: #83729A;
+// $color-primary-3: #24064D;
+// $color-primary-4: #05000A;
+//
+// .expense-item ul {
+//   background: $color-primary-1;
+//   color: $color-primary-4;
+// }
+//
+// .expense-delete {
+//   background-color: $color-primary-2;
+//   border: none;
+//   color: white;
+//   padding: 4px 8px;
+//   text-decoration: none;
+//   margin: 4px 2px;
+//   cursor: pointer;
+// }
 
-.expense-item ul {
-  background: $color-primary-1;
-  color: $color-primary-4;
-}
+@import '../../style/lib/vars';
+@import '../category-item/_category-item.scss';
 
-.expense-delete {
-  background-color: $color-primary-2;
-  border: none;
-  color: white;
-  padding: 4px 8px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
+.card-item {
+  position: relative;
+  width: 35%;
+  display: inline-block;
+	padding: $gutter-sm;
+  background: $white;
+  margin: $gutter-sm;
+  font-size: 2vw;
+  border: solid .5vw $black;
+  border-radius: $border-radius;
+  margin-left: 0;
+  margin-right: $gutter-sm;
+  line-height: 3vw;
+
+  p {
+    margin-bottom: $gutter-sm;
+  }
+
+  button {
+    &.remove {
+      right: 1vw;
+    }
+  }
 }

@@ -1,5 +1,3 @@
-import './_app.scss';
-
 import React from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
 import {Provider} from 'react-redux';
@@ -10,13 +8,13 @@ import createAppStore from '../../lib/store';
 const store = createAppStore();
 
 class App extends React.Component {
-  componentDidMount() {
-    store.subscribe(() => {
-      console.log('__STATE__', store.getState());
-    });
-    // sets an initial state for the console log above
-    store.dispatch({ type: null });
-  }
+  // componentDidMount() {
+  //   store.subscribe(() => {
+  //     console.log('__STATE__', store.getState());
+  //   });
+  //   // sets an initial state for the console log above
+  //   store.dispatch({ type: null });
+  // }
 
   render() {
     return (

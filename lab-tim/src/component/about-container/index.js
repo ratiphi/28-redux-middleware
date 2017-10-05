@@ -1,5 +1,3 @@
-import './_about-container.scss';
-
 import React from 'react';
 
 class AboutContainer extends React.Component {

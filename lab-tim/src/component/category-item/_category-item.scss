@@ -1,20 +1,51 @@
-$color-primary-0: #4B2D73;
-$color-primary-1: #E4DAF0;
-$color-primary-2: #83729A;
-$color-primary-3: #24064D;
-$color-primary-4: #05000A;
+// $color-primary-0: #4B2D73;
+// $color-primary-1: #E4DAF0;
+// $color-primary-2: #83729A;
+// $color-primary-3: #24064D;
+// $color-primary-4: #05000A;
+//
+// .category-item ul {
+//   background: $color-primary-1;
+//   color: $color-primary-4;
+// }
+//
+// .category-delete {
+//   background-color: $color-primary-2;
+//   border: none;
+//   color: white;
+//   padding: 4px 8px;
+//   text-decoration: none;
+//   margin: 4px 2px;
+//   cursor: pointer;
+// }
 
-.category-item ul {
-  background: $color-primary-1;
-  color: $color-primary-4;
-}
+@import '../../style/lib/vars';
 
-.category-delete {
-  background-color: $color-primary-2;
-  border: none;
-  color: white;
-  padding: 4px 8px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
+.category-item {
+  .content-container {
+    position: relative;
+    margin: $gutter-sm 0;
+
+    .remove {
+      background: none;
+      color: red;
+      position: absolute;
+      top: 0;
+      padding: 0;
+      right: 0;
+      font-size: 2.5vw;
+
+      &:hover {
+        text-shadow: 1px 1px 1px $white;
+      }
+    }
+
+    button[type="submit"] {
+      background: green;
+
+      &:hover {
+        background: #888;
+      }
+    }
+  }
 }

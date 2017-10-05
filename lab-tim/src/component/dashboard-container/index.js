@@ -1,5 +1,3 @@
-import './_dashboard-container.scss';
-
 import React from 'react';
 import {connect} from 'react-redux';
 import CategoryForm from '../category-form';
@@ -8,7 +6,7 @@ import {categoryCreate as categoryActionCreate} from '../../action/category-acti
 
 class DashboardContainer extends React.Component {
   componentDidMount() {
-    console.log('__DASHBOARD__', this);
+    //console.log('__DASHBOARD__', this);
     this.props.categoryCreate({title: 'transportation', budget: '1000'});
   }
 
@@ -22,7 +20,7 @@ class DashboardContainer extends React.Component {
           onComplete={this.props.categoryCreate} />
         <div className="category-list">
           {this.props.categories.map((item) => {
-            console.log('category item', item);
+            //console.log('category item', item);
             return (
               <CategoryItem
                 key={item.id}
