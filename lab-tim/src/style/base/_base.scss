@@ -26,7 +26,7 @@ button {
   transition: $transition-primary;
 
   &:hover {
-    background: $btn-primary;
+    background: $btn-secondary;
   }
 
   &.remove {
@@ -56,8 +56,36 @@ input[type="text"] {
   }
 }
 
+input[type="number"] {
+  border-radius: $border-radius;
+  box-sizing: border-box;
+  padding: $gutter-sm;
+  width: 100%;
+  font-size: 2vw;
+  margin-bottom: $gutter-sm;
+  border: none;
+  transition: $transition-primary;
+
+  &:focus {
+    background: #444;
+    color: $white;
+  }
+}
+
+h1 {
+  font-size: 4vw;
+  text-decoration: underline;
+  margin-bottom: $gutter-sm;
+}
+
 h2 {
   font-size: 3vw;
+  text-decoration: underline;
+  margin-bottom: $gutter-sm;
+}
+
+h3 {
+  font-size: 2vw;
   text-decoration: underline;
   margin-bottom: $gutter-sm;
 }

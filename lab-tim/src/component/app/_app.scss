@@ -1,34 +1,24 @@
-// $color-primary-0: #4B2D73;
-// $color-primary-1: #E4DAF0;
-// $color-primary-2: #83729A;
-// $color-primary-3: #24064D;
-// $color-primary-4: #05000A;
-//
-// body {
-//   background: $color-primary-1;
-//   color: $color-primary-4;
-// }
-//
-// header ul {
-//     list-style-type: none;
-//     margin: 0;
-//     padding: 0;
-//     overflow: hidden;
-//     background-color: $color-primary-0;
-// }
-//
-// header li {
-//     float: left;
-// }
-//
-// header li a {
-//     display: block;
-//     color: $color-primary-1;
-//     text-align: center;
-//     padding: 14px 16px;
-//     text-decoration: none;
-// }
-//
-// header li a:hover {
-//     background-color: $color-primary-3;
-// }
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $primary;
+}
+
+header li {
+    float: left;
+}
+
+header li a {
+    font-size: 4vw;
+    display: block;
+    color: $white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+header li a:hover {
+    background-color: $secondary;
+}

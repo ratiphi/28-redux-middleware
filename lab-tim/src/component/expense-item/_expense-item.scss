@@ -1,28 +1,7 @@
-// $color-primary-0: #4B2D73;
-// $color-primary-1: #E4DAF0;
-// $color-primary-2: #83729A;
-// $color-primary-3: #24064D;
-// $color-primary-4: #05000A;
-//
-// .expense-item ul {
-//   background: $color-primary-1;
-//   color: $color-primary-4;
-// }
-//
-// .expense-delete {
-//   background-color: $color-primary-2;
-//   border: none;
-//   color: white;
-//   padding: 4px 8px;
-//   text-decoration: none;
-//   margin: 4px 2px;
-//   cursor: pointer;
-// }
-
 @import '../../style/lib/vars';
 @import '../category-item/_category-item.scss';
 
-.card-item {
+.expense-item {
   position: relative;
   width: 35%;
   display: inline-block;

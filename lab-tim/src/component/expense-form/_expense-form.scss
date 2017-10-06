@@ -1,40 +1,11 @@
-// $color-primary-0: #4B2D73;
-// $color-primary-1: #E4DAF0;
-// $color-primary-2: #83729A;
-// $color-primary-3: #24064D;
-// $color-primary-4: #05000A;
-//
-// .expense-form {
-//   background: $color-primary-1;
-//   color: $color-primary-4;
-//
-//   input {
-//     width: 10vw;
-//     height: 3vh;
-//     padding: 1px 2px;
-//     border: 2px solid $color-primary-4;
-//     border-radius: 4px;
-//   }
-//
-//   input:focus {
-//       background-color: $color-primary-2;
-//   }
-//
-//   button[type=submit] {
-//       background-color: $color-primary-2;
-//       border: none;
-//       color: white;
-//       padding: 8px 16px;
-//       text-decoration: none;
-//       margin: 4px 2px;
-//       cursor: pointer;
-//   }
-// }
-
 @import '../../style/lib/vars';
 
-.card-form {
+.expense-form {
   input[type="text"] {
+    border: solid .5vw $black;
+  }
+
+  input[type="number"] {
     border: solid .5vw $black;
   }
 }
