@@ -1,0 +1,7 @@
+button[type="submit"] {
+  background: $btn-primary;
+
+  &:hover {
+    background: #888;
+  }
+}

@@ -1,0 +1,11 @@
+@import '../../style/lib/vars';
+
+.expense-form {
+  input[type="text"] {
+    border: solid .5vw $black;
+  }
+
+  input[type="number"] {
+    border: solid .5vw $black;
+  }
+}
