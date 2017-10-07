@@ -1,6 +1,10 @@
 @import '../../style/lib/vars';
 
 .category-item {
+  border: .4vw solid $black;
+  padding: 1vw;
+  background: $white;
+
   .content-container {
     position: relative;
     margin: $gutter-sm 0;

@@ -8,19 +8,35 @@ import ExpenseForm from '../expense-form';
 
 
 class ExpenseItem  extends React.Component {
-  render() {
-    //console.log('__EXPENSE ITEM STATE__', this.state);
-    //console.log('__EXPENSE ITEM PROPS__', this.props);
+  constructor(props) {
+    super(props);
+    this.state = {
+      editExpense: false,
+    };
+    this.toggleExpense = this.toggleExpense.bind(this);
+  }
 
+  toggleExpense() {
+    this.setState({editExpense: !this.state.editExpense});
+  }
+
+  render() {
     return (
       <div className="expense-item" id={this.props.expense.id}>
         <button className='expense-delete' onClick={()=>this.props.expenseDelete(this.props.expense)}>X</button>
+        <button onClick={this.toggleExpense}>edit expense</button>
         <p>{this.props.expense.name}: {this.props.expense.price}</p>
-        <ExpenseForm
-          categoryId={this.props.expense.categoryId}
-          buttonText='update expense'
-          onComplete={this.props.expenseUpdate}
-          expense={this.props.expense}/>
+
+        {this.state.editExpense ?
+          <ExpenseForm
+            categoryId={this.props.expense.categoryId}
+            buttonText='update expense'
+            onComplete={this.props.expenseUpdate}
+            toggle={this.toggleExpense}
+            expense={this.props.expense}/>
+          :
+          undefined
+        }
       </div>
     );
   }

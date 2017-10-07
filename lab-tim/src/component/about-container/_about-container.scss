@@ -1,3 +1,10 @@
 .about-container {
-  background: $secondary;
+  //background: $secondary;
+  margin-top: 2vh;
+  //border: 5px solid $primary;
+  width: 60vw;
+  margin-left: 16vw;
+  margin-right: 16vw;
+  padding: $gutter-sm;
+  min-height: 100vh;
 }
