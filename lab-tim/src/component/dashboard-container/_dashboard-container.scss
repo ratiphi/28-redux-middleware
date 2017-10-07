@@ -1,10 +1,13 @@
-// $color-primary-0: #4B2D73;
-// $color-primary-1: #E4DAF0;
-// $color-primary-2: #83729A;
-// $color-primary-3: #24064D;
-// $color-primary-4: #05000A;
-//
-// .dashboard-container {
-//   background: $color-primary-1;
-//   color: $color-primary-4;
-// }
+.dashboard-container {
+  //display: flex;
+  //border: 5px solid $primary;
+  width: 60vw;
+  margin-top: 2vh;
+  margin-left: 16vw;
+  margin-right: 16vw;
+  //height: 100vh;
+  //flex-wrap: wrap;
+  h2 {
+    text-decoration: none;
+  }
+}

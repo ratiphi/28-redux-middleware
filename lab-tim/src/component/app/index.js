@@ -8,13 +8,6 @@ import createAppStore from '../../lib/store';
 const store = createAppStore();
 
 class App extends React.Component {
-  // componentDidMount() {
-  //   store.subscribe(() => {
-  //     console.log('__STATE__', store.getState());
-  //   });
-  //   // sets an initial state for the console log above
-  //   store.dispatch({ type: null });
-  // }
 
   render() {
     return (
@@ -22,7 +15,7 @@ class App extends React.Component {
         <header>
           <nav>
             <ul>
-              <li><a href="/">dashboard</a></li>
+              <li id="first-li"><a href="/">dashboard</a></li>
               <li><a href="/about">about</a></li>
             </ul>
           </nav>
