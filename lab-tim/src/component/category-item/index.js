@@ -8,6 +8,7 @@ import {
   categoryUpdate as categoryActionUpdate,
   categoryDelete as categoryActionDelete,
 } from '../../action/category-actions';
+import Draggable from '../draggable';
 
 class CategoryItem  extends React.Component {
   constructor(props) {
@@ -62,7 +63,9 @@ class CategoryItem  extends React.Component {
 
             {this.props.expenses[this.props.category.id].length ?
               this.props.expenses[this.props.category.id].map((expense) =>
-                <ExpenseItem key={expense.id} expense={expense}/>)
+                <Draggable dataTransferItem={expense}>
+                  <ExpenseItem key={expense.id} expense={expense}/>
+                </Draggable>)
               :
               <h3>currently no expenses</h3>
             }

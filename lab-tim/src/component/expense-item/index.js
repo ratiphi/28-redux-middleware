@@ -6,7 +6,6 @@ import {
 } from '../../action/expense-actions';
 import ExpenseForm from '../expense-form';
 
-
 class ExpenseItem  extends React.Component {
   constructor(props) {
     super(props);
@@ -23,20 +22,20 @@ class ExpenseItem  extends React.Component {
   render() {
     return (
       <div className="expense-item" id={this.props.expense.id}>
-        <button className='expense-delete' onClick={()=>this.props.expenseDelete(this.props.expense)}>X</button>
-        <button onClick={this.toggleExpense}>edit expense</button>
-        <p>{this.props.expense.name}: {this.props.expense.price}</p>
+          <button className='expense-delete' onClick={()=>this.props.expenseDelete(this.props.expense)}>X</button>
+          <button onClick={this.toggleExpense}>edit expense</button>
+          <p>{this.props.expense.name}: {this.props.expense.price}</p>
 
-        {this.state.editExpense ?
-          <ExpenseForm
-            categoryId={this.props.expense.categoryId}
-            buttonText='update expense'
-            onComplete={this.props.expenseUpdate}
-            toggle={this.toggleExpense}
-            expense={this.props.expense}/>
-          :
-          undefined
-        }
+          {this.state.editExpense ?
+            <ExpenseForm
+              categoryId={this.props.expense.categoryId}
+              buttonText='update expense'
+              onComplete={this.props.expenseUpdate}
+              toggle={this.toggleExpense}
+              expense={this.props.expense}/>
+            :
+            undefined
+          }
       </div>
     );
   }

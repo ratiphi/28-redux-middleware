@@ -1,18 +1,19 @@
 @import '../../style/lib/vars';
-@import '../category-item/_category-item.scss';
+//@import '../category-item/_category-item.scss';
 
 .expense-item {
+  box-sizing: border-box;
   position: relative;
-  width: 35%;
+  width: 100%;
   display: inline-block;
 	padding: $gutter-sm;
   background: $btn-secondary;
-  margin: $gutter-sm;
+  //margin: $gutter-sm;
   font-size: 2vw;
   border: solid .5vw $black;
   border-radius: $border-radius;
-  margin-left: 0;
-  margin-right: $gutter-sm;
+  //margin-left: 0;
+  //margin-right: $gutter-sm;
   line-height: 3vw;
 
   p {

@@ -12,6 +12,13 @@ export const expenseCreate = (expense) => {
   };
 };
 
+export const expenseInsert = (expense) => {
+  return {
+    type: 'EXPENSE_CREATE',
+    payload: expense,
+  };
+};
+
 export const expenseUpdate = (expense) => {
   return {
     type: 'EXPENSE_UPDATE',
